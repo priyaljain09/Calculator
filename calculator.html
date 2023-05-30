@@ -62,7 +62,7 @@
             <Input type="button" value="." onclick="form.answer.value += '.' ">
             <!--Result(=) button-->
             <!--onclick="form.answer.value = eval(form.answer.value)"   -->
-            <Input  type="button" value="=" onclick="form.answer.value = eval(form.answer.value)">
+            <Input  type="button" value="=" onclick="validate()">
             <br><br>
             <!--Clear Button-->
             <input type = "button" value = "Clear All" onclick = "form.answer.value = ' ' " id= "clear" ><br>  
@@ -75,13 +75,29 @@
     if (empty == " "){-
     alert("Please input a Value");
     }
-}*/
-function validate(){
+}
+function formValidate(e){
+    form.answer.value = eval(form.answer.value)
+    e.preventDefault();
+   */ 
+    
+
+/*function validate(){
     var x = document.forms["form"]["answer"].value;
+    
     if (x == null){
     alert("Please input a Value");
     return false;
+    else{
+       form.answer.value = eval(form.answer.value) 
     }
+    }
+}*/
+function validate(){
+form.answer.value = eval(form.answer.value);
+if(calc ===""){
+    document.getElementByClass("calc").innerHTML = "Please enter input values.";
+}
 }
 </script> 
 </body>
