@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        #clock{
+            font-size: 40px;
+            border: 2px solid black;
+            text-align: center;
+            width: 50%;
+            height: 150px;
+            padding-top: 20px;
+            background-color: lightcyan;
+            margin: 20px;
+            
+
+        }
+        .heading{
+            font-size: 60px;
+            background-color: black;
+            color: white;
+        }
+        .btn{
+            width: 80px;
+            height: 50px;
+            border: 2px solid black;
+            background-color: lightpink;
+
+        }
+        #image{
+                float: right;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <H1 class="heading">Watch</H1>
+    <img src="clock.gif" height="300px" width="400px" id="image">
+    <h1 id="text">Clock</h1>
+    <div id="clock">2:44:01</div>
+    <div class="container">
+    <h1 id="text">Stop Watch</h1>
+    <div id="clock">
+    <div id="time">
+        <span class="digit" id="hr">00</span>
+        <span class="txt">Hr</span>
+
+        <span class="digit" id="min">00</span>
+        <span class="txt">Min</span>
+
+        <span class="digit" id="sec">00</span>
+        <span class="txt">Sec</span>
+
+        <span class="digit" id="count">00</span>
+    </div>
+
+    <div id="buttons">
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reset">Reset</button>
+    </div>
+</div>
+</div>
+</center>
+    <script src="clock.js" ></script>
+    
+</body>
+</html>

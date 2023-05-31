@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<style>
+body{
+    background-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  align-items: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 700px;
+  width: 1000px;
+  border: 2px solid black;
+  align-items: center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: lightsalmon;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+  font-size: 40px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 14.28%;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+h2{
+    color: white;
+    font-size: 50px;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Seven Wonders of the World</h2>
+<center>
+<div class="container">
+    <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="images/chichenItza.jpg" style="width:1000px;height: 700px;">
+    </div>
+
+    <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="images/china wall.jpg" style="width:1000px;height: 700px">
+    </div>
+
+    <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="images/chirst.jpg" style="width:1000px;height: 700px">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="images/colosseum.jpg" style="width:1000px;height: 700px">
+    </div>
+
+    <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="images/MachuPicchu.jpg" style="width:1000px;height: 700px">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="images/petra.jpg" style="width:1000px;height: 700px">
+    </div>
+
+    <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="images/TajMahal.jpg" style="width:80%;height:700px">
+    </div>
+</center>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container"><p id="caption"></p></div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/chichenItza.jpg" style="width:100%" onclick="currentSlide(1)" alt="Chichen Itza" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/china wall.jpg" style="width:100%" onclick="currentSlide(2)" alt="China Wall" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/chirst.jpg" style="width:100%" onclick="currentSlide(3)" alt="Chirst Redeemer">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/colosseum.jpg" style="width:100%" onclick="currentSlide(4)" alt="Colosseum">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/MachuPicchu.jpg" style="width:100%" onclick="currentSlide(5)" alt="Machu Picchu">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/petra.jpg" style="width:100%" onclick="currentSlide(6)" alt="Petra">
+    </div>
+    <div class="column">
+        <img class="demo cursor" src="images/TajMahal.jpg" style="width:100%" onclick="currentSlide(7)" alt="Taj Mahal">
+    </div>
+  </div>
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show </title>
+    <style>
+        body {
+          font-family: Arial;
+          margin: 0;
+        }
+        *{
+          box-sizing: border-box;
+        }
+        img {
+          vertical-align: middle;
+        }
+        /* Position the image container (needed to position the left and right arrows) */
+        .slideshow {
+          position: relative;
+        }
+        /* Hide the images by default */
+        .mySlides {
+          display: none;
+        }
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+          cursor: pointer;
+        }
+        
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: whiet;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* Container for image text */
+        .caption-container {
+          text-align: center;
+          background-color: #222;
+          padding: 2px 16px;
+          color: white;
+        }
+        
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Six columns side by side */
+        .column {
+          float: left;
+          width: 14.28%;
+          height: 150px;
+        }
+        
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+          opacity: 0.6;
+        }
+        .active,
+        .demo:hover{
+          opacity: 1;
+        }
+        </style>
+</head>
+<body>
+    <div id="heading">
+        <H1>Seven Wonder of the World</H1>
+    </div>
+    <div class="slideshow">
+        <div class="mySlides">
+            <img src="images/china wall.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/chichenItza.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/TajMahal.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/petra.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/chirst.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/colosseum.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <img src="images/MachuPicchu.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-contatiner"><p id="caption"></p></div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="images/china wall.jpg" style="width:100%" onclick="currentslide(1)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/chichenItza.jpg" style="width:100%" onclick="currentslide(2)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/TajMahal.jpg" style="width:100%" onclick="currentslide(3)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/petra.jpg" style="width:100%" onclick="currentslide(4)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/chirst.jpg" style="width:100%" onclick="currentslide(5)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/colosseum.jpg" style="width:100%" onclick="currentslide(6)">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/MachuPicchu.jpg" style="width:100%" onclick="currentslide(7)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>-->
